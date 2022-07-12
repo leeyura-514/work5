@@ -1,0 +1,207 @@
+@import './reset.css';
+@import './common.css';
+
+
+.fixed-bar{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 170px;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'hybe';
+    z-index: 20;
+}
+.fixed-bar span{font-size: 30px;}
+.fixed-bar .rotate{
+    margin-top: 100px;
+    font-size: 20px;
+    transform: rotate(-90deg);
+}
+
+
+
+
+
+/* header */
+
+.header-area{
+    position: relative;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    z-index: 50;
+}
+.header-area .logo{
+    width: 95px; height: 35px;
+    background: url(../images/logo/logo.svg) no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: absolute;
+    top: 7.5px;
+    left: 30px;
+}
+.header-area .logo a{
+    display: block;
+    height: 100%;
+}
+
+.header-area .gnb-area{
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 20px;
+}
+
+.header-area .gnb-area .gnb-item{
+    display: block;
+    padding: 10px;
+    color : #fbfbfb;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: .1em;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+
+.header-area .gnb-open{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/icon/gnb-open.svg) no-repeat 0/100%;
+    width: 150px; height: 32px;
+    background-size: 150px 32px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-area .gnb-open .line{
+    background: #000;
+    width: 37px;
+    height: 2px;
+}
+.header-area .gnb-open .line+.line{margin-top: 9px;}
+.header-area .btn-menu span{
+    position: absolute;
+    top: 21px;
+    right: 30px;
+    background: #fff;
+    width: 20px;
+    height: 2px;
+    display: none;
+}
+.header-area .btn-menu span + span{
+    top: 28px;
+}
+
+
+
+
+
+
+/* footer  */
+.footer-area{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 30px;
+    color: #fbfbfb;
+    font-size: 13px;
+    line-height: 13px;
+}
+.footer-area .copy{flex: 0 0 30%;}
+.footer-area .sns-box{
+    flex: 0 0 40%;
+    text-align: center;
+}
+.footer-area .sns-box a+a {margin-left: 20px;}
+.footer-area .corp-box{
+    flex: 0 0 30%;
+    text-align: right;
+    letter-spacing: .1em;
+}
+.footer-area .corp-box a{
+    line-height: 13px;
+}
+
+
+.footer-area .corp-box .bar{
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #fbfbfb;
+    margin: 0 10px;
+    vertical-align: bottom;
+}
+
+
+/* 반응형 */
+@media (max-width:  1023px){
+    .header-area .logo{
+        top: 18px;
+        width: 70px;
+        height: 13px;
+    }
+    .header-area .gnb-area .gnb-item{display: none;}
+    .header-area .gnb-open{
+        width: 120px;
+        height: 20px;
+        background-size: 120px 22px;
+    }
+    .header-area .gnb-open .line{width: 30px;}
+    .header-area .gnb-open .line+.line{
+        margin-top: 4px;
+    }
+    .header-area .btn-menu span{display: block;}
+
+    .footer-area{
+        flex-direction: column;
+        justify-content: start;
+        line-height: 20px;
+    }
+    .footer-area .corp-box .bar{margin: 4px 10px;}
+}/*  */
+
+
+@media (max-width:  480px){
+    .header-area .gnb-area{height: 40px;}
+    .header-area .logo{top: 14px; left: 20px;}
+
+    .header-area .btn-menu span {
+        top: 15px;
+        right: 20px;
+    }
+    .header-area .btn-menu span + span{top: 24px;}
+    
+    .footer-area{font-size: 12px;}
+    .footer-area .sns-box a+a {margin-left: 5px;}
+    
+}/*  */
+
+
+@media (max-width:  320px){
+    .footer-area{font-size: 10px; padding: 0 20px 20px;}
+    .footer-area .corp-box a {line-height: 10px;}
+}/*  */
+
+
+
+
+
+
