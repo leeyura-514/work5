@@ -500,6 +500,7 @@
 
 
 @media (max-width:  480px){
+    .black-screen{font-size: 100px;}
     .fixed-bar{display: none;}
     .sc-visual .cont-box .title{font-size: 55px;}
     .sc-visual .cont-box .cont{font-size: 20px;}
